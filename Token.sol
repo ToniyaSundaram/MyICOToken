@@ -92,24 +92,24 @@ contract Token {
  
  
 contract ToniyaCoin is StandardToken {
-    string public tokenName; // tokenName
-    uint8 public decimals; //  How many deceimal places to show . standard 18 
-    string public symbol;  // An identifier eg: BTC, ETH
+    string public tokenName;               // tokenName               
+    uint8 public decimals;                 //  How many deceimal places to show . standard 18  
+    string public symbol;                  // An identifier eg: BTC, ETH    
     string public version= "T1.0"; 
-    uint256 public uintOneEthCanBuy;    // How many units of your coin can be bought by 1ETH 
-    uint256 public totalEthinWei;       //Wei is the smallest uint of eth We'll store the total ETH raised via our ICO here.  
-    address public fundsWallet;          // where should the raised ICO go          
+    uint256 public uintOneEthCanBuy;       // How many units of your coin can be bought by 1ETH 
+    uint256 public totalEthinWei;          //Wei is the smallest uint of eth We'll store the total  ETH raised via our ICO here.  
+    address public fundsWallet;            // where should the raised ICO go       
     
     
     // A constructor which gives all initial tokens to the creater. 
     function ToniyaCoin () {
-        balances[msg.sender] = 1000000000000000000000;
-        totalSupply = 1000000000000000000000;   // update the tototalSupply to the initialcoins
-        tokenName = "ToniyaCoin";            // Set the name for display purpose
-        decimals=18;
-        symbol = "TCN";
-        uintOneEthCanBuy = 10;              // Set the price of your tokenName
-        fundsWallet = msg.sender;            // The owner of the ETH
+        balances[msg.sender] = 1000000000000000000000;          [U CAN CHANGE THIS]
+        totalSupply = 1000000000000000000000;       // update the tototalSupply to the initialcoins     [U CAN CHANGE THIS]
+        tokenName = "ToniyaCoin";                   // Set the name for display purpose            [U CAN CHANGE THIS]
+        decimals=18;                                // [U CAN CHANGE THIS]
+        symbol = "TCN";                             // [U CAN CHANGE THIS]
+        uintOneEthCanBuy = 10;                      // Set the price of your tokenName      [U CAN CHANGE THIS] 
+        fundsWallet = msg.sender;                    // The owner of the ETH        [U CAN CHANGE THIS]
     }
     
     function () payable {
