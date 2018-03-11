@@ -1,0 +1,36 @@
+Building my own ERC20 Token 
+1. Writing the contract 
+Step 1: write all the abstract function in one contract 
+Step 2: Inherit the Base contract and expand all the functions 
+There are functions to transfer tokens, Aprrove the transfer of tokens, check the balance of the sender, check the remaining tokens left to spend 
+There are 2 Events say Transfer and Approve
+So what are events in solidity
+Event is like an interface for the function. 
+For Example. Switch on to turn on the light . event switchOn. we can have a function say switchOn and define what it should on switch on, it should turn on the light. 
+So when we call switchOn the event gets triggered to execute the function.
+What is the difference between function and events 
+
+
+Basically events create log entries in the blockchain. I find them especially useful for functions that modify the state of the blockchain (transactions). Functions that modify the state of the blockchain cannot have return values, because their execution is not completed immediately, they are only finished once the block that contains the transaction has been mined.
+
+To your example: Lets say you want to rent a car. How expensive that is may depend on certain parameters and conditions. So in order to let the user know how much he actually paid you might fire an event containing that information. The user can later(after the transaction has been mined) access the event's data by retrieving a transaction receipt for this transaction.
+
+--> // Events are the way to inform external monitoring entities about the 
+// cenrtain activities in the smart contracts
+// they can also be used as a log in the system.
+Events allow the convenient usage of the EVM logging facilities. 
+
+--- Then expanding the functions --- 
+1. Transfer function will check for suffecient funds and add in the receiver account, deducts from the sender account 
+2. Balnce will check the balance of the account
+3. allowance will return how much tokens is allowed to transfer 
+
+0x196914ab360c185a9ca05252b13f089ad4468193dcf6f66a148fff0ba15bc62c
+contract address : 0x3e6fF82adE551bA9Efb01cB060c5B21092Eb5956
+Contract Address
+0x3d3d353ab4a797476411888763c6198d6ca342b09793d1b9851fd6bb5fae6ae6
+-- complted by 11:16 AM 
+
+---------
+Question Time : I am unable to check other functions 
+ApproveAndCall : what is exactly mean
